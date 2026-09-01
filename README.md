@@ -26,10 +26,13 @@ pip install -r requirements.txt
 ```python
 from file_utils import find_files, cleanup_empty_dirs
 from text_utils import slugify, truncate
-from date_utils import date_range
+from date_utils import date_range, month_dates
 
 for date in date_range("2024-01-01", "2024-01-31"):
     print(date)
+
+for date in month_dates(2024, 2):
+    print(date)  # includes 2024-02-29
 ```
 
 ## Contributing

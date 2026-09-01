@@ -1,5 +1,6 @@
 """Small date and timezone helpers with no third-party dependencies."""
 
+from calendar import monthrange
 from datetime import date, datetime, time, timedelta, timezone
 from zoneinfo import ZoneInfo
 
@@ -21,6 +22,12 @@ def date_range(start, end):
     while current <= last:
         yield current.isoformat()
         current += timedelta(days=1)
+
+
+def month_dates(year, month):
+    """Yield every ISO date in a calendar month, including leap days."""
+    last_day = monthrange(year, month)[1]
+    return date_range(date(year, month, 1), date(year, month, last_day))
 
 
 def convert_timezone(value, target_timezone):
