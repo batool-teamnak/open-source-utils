@@ -16,8 +16,8 @@ A collection of open-source Python utilities and helper scripts for common devel
 ## Installation
 
 ```bash
-git clone https://github.com/nadir-ali-khan/open-source-utils-nadir-ali-khan
-cd open-source-utils-nadir-ali-khan
+git clone https://github.com/batool-teamnak/open-source-utils
+cd open-source-utils
 pip install -r requirements.txt
 ```
 
